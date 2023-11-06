@@ -1,6 +1,7 @@
-import {renderMovies} from './modules/movies.js'
+import {renderMovies} from './modules/movies.js';
 
 function App() {
-    renderMovies()
+    renderMovies();
 }
-App()
+
+App();
