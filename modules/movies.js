@@ -18,10 +18,10 @@ export async function renderMovies() {
 }
 
 function renderSingleMovie(movie) {
-    let genresString = movie?.genre_ids.map(genreId => genres.get(genreId)).join(" ");
+    let genresString = movie?.genre_ids.map(genreId => genres.get(genreId).toLowerCase()).join(" ");
     return (
         `
-        <div class="col-4 col-lg-3 col-xl-2 p-1 ${genresString}">
+        <div class="movie ${genresString} col-4 col-lg-3 col-xl-2 p-1">
             <img src="${config.image_base_url + movie?.poster_path}" class="img-fluid" >
         </div>
         `
