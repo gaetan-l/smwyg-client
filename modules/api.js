@@ -6,9 +6,9 @@ const API_KEY = config.api_key
 export async function getMovieGenres() {
     let data = [];
     try {
-        const response = await await fetch(`${BASE_URL}/movie-genres`);
+        const response = await await fetch(`${BASE_URL}/genres`);
         const responseData = await response.json();
-        data = responseData?.genres;
+        data = responseData;
     }
     catch (error) {
 
@@ -20,7 +20,7 @@ export async function getPopularMovies(page = 1) {
     let data = []
     try {
         //const response = await fetch(`${BASE_URL}movie/popular?api_key=${API_KEY}&page=${page}`)
-        const response = await fetch(`${BASE_URL}/popular-titles`)
+        const response = await fetch(`${BASE_URL}/titles`)
         const responseData = await response.json()
         data = responseData?.results
     }
