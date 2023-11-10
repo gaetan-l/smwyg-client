@@ -6,8 +6,7 @@ const API_KEY = config.api_key
 export async function getPopularMovies(page = 1) {
     let data = []
     try {
-        //const response = await fetch(`${BASE_URL}movie/popular?api_key=${API_KEY}&page=${page}`)
-        const response = await fetch(`${BASE_URL}/titles`)
+        const response = await fetch(`${BASE_URL}/title`)
         const responseData = await response.json()
         data = responseData;
     }
